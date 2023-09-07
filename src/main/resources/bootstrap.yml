@@ -1,0 +1,48 @@
+spring:
+  profiles:
+    active: prod
+
+---
+## 开发调试环境
+server:
+  port: 8089
+spring:
+  profiles: dev-debug
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 10.246.96.100:8848
+        weight: 1 # 禁用负载，避免本地调试负载均衡异常
+    inetutils:
+      preferred-networks: 10\.16\.\d+\.\d+
+  ATTACHMENT_FILE: C:\\tmp
+
+---
+## 测试环境
+server:
+  port: 8088
+spring:
+  profiles: test
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 10.246.96.100:8848
+        namespace: 7f255502-7971-46d9-9728-8d8dfa38daf5
+    inetutils:
+      preferred-networks: 10\.16\.\d+\.\d+
+  ATTACHMENT_FILE: C:\\tmp
+
+---
+## 生产环境
+server:
+  port: 8087
+spring:
+  profiles: prod
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 10.246.1.95:8848
+        weight: 1 # 禁用负载，避免本地调试负载均衡异常
+    inetutils:
+      preferred-networks: 10\.16\.\d+\.\d+
+  ATTACHMENT_FILE: C:\\tmp

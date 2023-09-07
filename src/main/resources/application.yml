@@ -1,0 +1,35 @@
+spring:
+  jackson:
+    time-zone: GMT+8
+    date-format: yyyy-MM-dd HH:mm:ss
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
+  application:
+    name: alm-gateway
+  mvc:
+    view:
+      prefix: /
+      suffix: .html
+logging:
+  file:
+    name: /gwm-gateway.log
+    max-history: 30
+  charset:
+    file: utf-8
+integrity:
+  hostname: 10.255.128.114
+  port: 7001
+  user: admin
+  password: 456@alm.com
+gwm:
+  env: rest #sandbox
+  appKey: 865S22A96T13 #62188A3A3B48
+  appSecret: d59574e1b4474c8abba8e0d47a46d720 #363c36d6f6854fea8050101cfff844be
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 500000 # 连接超时时间
+        readTimeout: 500000   # 读超时时间
