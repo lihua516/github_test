@@ -1,0 +1,70 @@
+关闭防火墙
+systemctl  stop   firewalld.service
+开启防火墙
+systemctl  start   firewalld.service
+禁止开机启动启动防火墙=
+systemctl   disable   firewalld.service
+
+（1） 以oracle身份登录数据库，命令：su –oracle  (如果需要指定实例：export ORACLE_SID=user_test --user_test为数据库)
+（2） 进入Sqlplus控制台，命令：sqlplus / as sysdba
+（3） 启动数据库，命令：startup
+ipconfig /release
+
+ipconfig /renew
+（4） 如果是关闭数据库，命令：shutdown immediate
+（5） 退出sqlplus控制台，命令：exit
+（6） 进入监听器控制台，命令：lsnrctl start
+（7） 退出监听器控制台，命令：exit
+（8） 重启数据库结束
+
+lsof -i:8080
+iptables -A INPUT -p tcp --dport 8080 -j ACCEPT
+netstat -ntulp | grep 8080
+
+docker run -p 9090:9090 \
+--restart=always \
+-v /opt/nginx/docker-nginx/nginx.conf:/etc/nginx/nginx.conf \
+-v /opt/nginx/docker-nginx/logs:/var/log/nginx \
+-v /opt/nginx/docker-nginx/html:/usr/share/nginx/html \
+-v /opt/nginx/docker-nginx/conf:/etc/nginx/conf.d \
+-v /etc/localtime:/etc/localtime \
+--name nginx \
+-d nginx:1.22.0
+
+docker exec -it 775c7c9ee1e1 /bin/bash
+
+clear
+
+1. 启动docker
+systemctl start docker
+
+2. 关闭docker
+systemctl stop docker
+
+3. 重启docker
+systemctl restart docker
+
+drop user user_name cascade;
+
+1.1.2.1通过编辑 /etc/selinux/config 文件禁用 selinux，并将 SELINUX 设置为以 root 用户身份禁用或使用 sudo，然后重新启动主机
+sudo sed -i 's/^SELINUX=enforcing/SELINUX=disabled/' /etc/selinux/config
+验证：
+
+sudo grep ^SELINUX= /etc/selinux/config
+SELINUX=disabled
+
+docker-compose up
+linux给指定用户的目录授权
+chown codebeamer /opt/cb -R
+
+5f-e8-d6-66-2d-cc-fb-1a
+alter database clear logfile group 1; 
+slapd -d 1 -h "ldap://pdm.huaz.com/" -f ./slapd.conf  pwd secret
+
+
+Gateway import --user=admin --password=456@alm.com --hostname=10.255.128.114 --port=7001 --config="Platform Software Requirement Specification Document" --file="‪‪C:\Users\admin.WIN-JUAUJLC14VH\Desktop\rfrf.docx" --Fields="Project"="/ALM演示";"Category"="Requirement";"Title"="202209191430" --silent
+
+im createsegment --type="Platform Software Requirement Specification Document" --field=Project=/ALM演示 --field="Shared Category=Document" --field="Document Short Title=tttt919"--
+
+Gateway import --user=admin --password=456@alm.com --hostname=10.255.128.114 --port=7001 --config="Platform Software Requirement Specification Document" --file="C:\Users\admin.WIN-JUAUJLC14VH\Desktop\rfrf.docx" --Fields="Project"="/ALM演示";"Category"="Requirement";"Title"="202209191430" --silent
+

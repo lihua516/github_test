@@ -1,0 +1,133 @@
+gB1vsyw1Ro31AHFLaedX
+
+Error while running repositorysynchronization job, for: huazhong.li /huazhong.li
+1、git clone -b <指定分支名> <远程仓库地址>
+
+克隆指定分支
+
+如：
+
+git clone -b bestore_master ssh://git@git-ssh.xxx.com/xxx.git
+
+
+
+2、 git branch
+
+查看当前分支
+
+
+
+3、git branch -r
+
+ 或者git branch -a
+
+查看所有分支
+
+
+
+4、git checkout <指定分支名>
+
+切换分支
+
+如：
+
+git checkout bestore_sprint_1115
+
+
+
+5、git pull
+
+拉代码
+
+
+
+
+6、git add -A
+
+git add -A  提交所有变化
+
+git add -u  提交被修改(modified)和被删除(deleted)文件，不包括新文件(new)
+
+git add .  提交新文件(new)和被修改(modified)文件，不包括被删除(deleted)文件
+
+add到缓存中
+
+
+
+7、提交代码
+
+git commit -m "注释"
+
+
+
+8、推送代码
+
+git push
+
+
+
+9、git init
+
+初始化：创建一个git仓库，创建之后就会在当前目录生成一个.git的文件
+
+
+
+10、git add filename
+
+添加文件：把文件添加到缓冲区
+
+
+
+11、git rm filename
+
+删除文件
+
+
+
+12、git status
+
+查看git库的状态，未提交的文件，分为两种，add过已经在缓冲区的，未add过的
+
+
+
+13、git diff filename
+
+比较：如果文件修改了，还没有提交，就可以比较文件修改前后的差异
+
+
+
+14、git log
+
+查看日志
+
+
+
+15、git reset
+
+版本回退：可以将当前仓库回退到历史的某个版本
+
+git reset --hard HEAD^：
+
+回退到上一个版本（HEAD代表当前版本，有一个^代表上一个版本，以此类推）
+
+git reset --hard d7b5：
+
+回退到指定版本(其中d7b5是想回退的指定版本号的前几位)
+
+
+
+16、git reflog
+
+查看命令历史：查看仓库的操作历史
+
+
+
+17、git remote add origin git://127.0.0.1/abc.git
+
+增加了远程仓库abc
+
+
+
+18、git remote remove origin
+
+glpat-cc3kCcyYHmdXpqTPxSK6
