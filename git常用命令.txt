@@ -131,3 +131,5 @@ git reset --hard d7b5：
 18、git remote remove origin
 
 glpat-cc3kCcyYHmdXpqTPxSK6
+
+docker run \ -itd \ -p 8088:80 \ -p 2022:22 \ -v /home/gitlab/etc:/etc/gitlab \ -v /home/gitlab/log:/var/log/gitlab \ -v /home/gitlab/opt:/var/opt/gitlab \ --restart always \ --privileged=true \ --name gitlab \ gitlab/gitlab-ce
